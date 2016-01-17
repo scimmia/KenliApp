@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">移动病案</string>
+    <string name="app_name">协同办公平台</string>
     <string name="action_pre">上一张</string>
     <string name="action_next">下一张</string>
     <string name="menu_lock">锁定</string>
@@ -13,7 +13,7 @@
     <string name="action_sign_in_short">登录</string>
     <string name="login_savepassword">保存密码</string>
     <string name="error_field_required">请填写内容</string>
-    <string name="title_activity_main">移动病案</string>
+    <string name="title_activity_main">人口和计划生育3G协同办公平台</string>
     <string name="title_activity_search">查阅病案</string>
     <string name="title_activity_favourite">收藏夹</string>
     <string name="title_activity_borrow_list">借阅记录</string>
@@ -62,4 +62,12 @@
 
     <integer name="maxBeforeDays">-10</integer>
     <string name="title_activity_banner_image_detail">详情</string>
+    <string name="title_activity_tongxunlu_search">查找联系人</string>
+    <string name="title_activity_tongxunlu_result">联系人列表</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="search_quxian">区(县)</string>
+    <string name="search_jiedaoxiangzhen">街道(乡镇)</string>
+    <string name="search_shequ">社区(村)</string>
 </resources>

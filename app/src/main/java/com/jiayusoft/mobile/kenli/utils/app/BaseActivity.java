@@ -34,8 +34,8 @@ public abstract class BaseActivity extends AppCompatActivity implements GlobalDa
         initContentView();
         ButterKnife.bind(this);
         mBaseActivity = BaseActivity.this;
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getActionBar().setBackgroundDrawable(getResources().getDrawable(R.mipmap.ic_launcher));
+//        getActionBar().setDisplayShowHomeEnabled(true);
 //        String logoColor = BaseApplication.getCurrentUser().getLogoColor();
 //        if (StringUtils.isNotEmpty(logoColor)){
 //            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor(logoColor)));
