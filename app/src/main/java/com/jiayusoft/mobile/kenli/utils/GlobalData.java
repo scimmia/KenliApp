@@ -19,12 +19,11 @@ public interface GlobalData {
     public static final String innerServerUrl = "11.0.0.55:8880/mobile";
     public static final String serverUrl = "serverUrl";
 
-    public static final String officeInited = "officeInited";
-    public static final String officeVersion = "officeVersion";
-    public static final int officeCurrentVersion = 2;
-    //2 增加西院科室信息
+    public static final String dbInited = "dbInited";
+    public static final String dbVersion = "dbVersion";
+    public static final int dbCurrentVersion = 1;
 
-    public static final String LOGIN_USER_NAME = "LOGIN_USER_NAME";
+    public static final String XMLBody = "XMLBody";
     public static final String LOGIN_PASSWORD = "LOGIN_PASSWORD";
     public static final String LOGIN_SAVE_PASSWORD = "LOGIN_SAVE_PASSWORD";
     public static final String loginAutoLogin = "loginAutoLogin";
@@ -98,4 +97,16 @@ public interface GlobalData {
     String baseFolder = Environment.getExternalStorageDirectory().getPath()+ File.separator+"JiayuSoft"+ File.separator;
     String updateFolder = baseFolder + "update" + File.separator;
 
+
+    public static final String WS_NameSpace = "http://com.zljy.oa.webservice";
+    public static final String SERVICE_URL = "http://113.128.228.118:9090/oa/ws/Wis4vWebServices";
+//    public static final String SERVICE_URL = "http://113.128.228.118:9090/oa/ws/ImpData";
+    public static final String WS_Method_getXianinfo = "getXianinfo";
+    public static final String WS_Method_getJdinfo = "getJdinfo";
+    public static final String WS_Method_getJwhinfo = "getJwhinfo";
+
+    public static final String WS_Method_getYlfninfo = "getYlfninfo";
+
+    public static final String WS_Property_Binding = "Request";
+    public static final String WS_Property_Save = "Request";
 }

@@ -9,6 +9,9 @@ import butterknife.OnFocusChange;
 import com.jiayusoft.mobile.kenli.R;
 import com.jiayusoft.mobile.kenli.utils.DebugLog;
 import com.jiayusoft.mobile.kenli.utils.app.BaseActivity;
+import com.jiayusoft.mobile.kenli.utils.webservice.SoapRequestStruct;
+import com.jiayusoft.mobile.kenli.utils.webservice.WebServiceTask;
+import com.jiayusoft.mobile.kenli.utils.webservice.WebServiceUtil;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class TongxunluSearchActivity extends BaseActivity {
@@ -50,7 +53,8 @@ public class TongxunluSearchActivity extends BaseActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            beginActivity(TongxunluResultActivity.class);
+            searchTongxunlu();
+//            beginActivity(TongxunluResultActivity.class);
             return true;
         }
 
@@ -71,5 +75,29 @@ public class TongxunluSearchActivity extends BaseActivity {
 
         int maxBeforeDays = getResources().getInteger(R.integer.maxBeforeDays);
 //        ChooseFromToDatesDialogFragment.newInstance(beginTime, endTime,maxBeforeDays).show(getFragmentManager(), "ChooseFromToDates");
+    }
+
+    void searchTongxunlu(){
+        String xmlString =
+//                "<?xml version=\"1.0\" encoding=\"UTF-8\"?><root><request>" +
+//                        "<usercode>123</usercode>" +
+//                        "<password>321</password>" +
+//                        "<phone>1112321</phone></request></root>";
+//                WebServiceUtil.buildXml("getXianinfo", "<code>2</code>");
+//                WebServiceUtil.buildXml("getXianinfo", "<xiancode>370521</xiancode>");
+                WebServiceUtil.buildXml("getXianinfo", "<jdcode>370521001</jdcode>");
+//        new WebServiceTask(TongxunluSearchActivity.this, "检查新版本...", xmlString, null).execute();
+        SoapRequestStruct soapRequestStruct = new SoapRequestStruct();
+        soapRequestStruct.setServiceNameSpace(WS_NameSpace);
+//        soapRequestStruct.setMethodName(WS_Method_getXianinfo);
+//        soapRequestStruct.setMethodName(WS_Method_getJdinfo);
+        soapRequestStruct.setMethodName(WS_Method_getJwhinfo);
+        soapRequestStruct.setServiceUrl(SERVICE_URL);
+//            soapRequestStruct.setServiceUrl("http://58.56.20.118:9090/oa/ws/ImpData");
+        soapRequestStruct.addProperty(WS_Property_Binding,xmlString);
+        DebugLog.e("WS_Property_Binding: " + xmlString);
+
+        new WebServiceTask(TongxunluSearchActivity.this, "校验中...",soapRequestStruct, null).execute();
+
     }
 }

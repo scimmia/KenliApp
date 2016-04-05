@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import butterknife.Bind;
+import com.jiayusoft.mobile.kenli.suifangdengji.ChaxunActivity;
 import com.jiayusoft.mobile.kenli.tongxunlu.TongxunluSearchActivity;
 import com.jiayusoft.mobile.kenli.utils.DebugLog;
 import com.jiayusoft.mobile.kenli.utils.app.BaseActivity;
@@ -60,7 +61,7 @@ public class MainActivity extends BaseActivity {
             }
         }
         iconItems = new ArrayList<ClientinfoItem>();
-        iconItems.add(new ClientinfoItem(MainActivity.class, R.mipmap.icon_main_suifangdengji, R.string.main_suifangdengji));
+        iconItems.add(new ClientinfoItem(ChaxunActivity.class, R.mipmap.icon_main_suifangdengji, R.string.main_suifangdengji));
         iconItems.add(new ClientinfoItem(MainActivity.class, R.mipmap.icon_main_wischaxun, R.string.main_wischaxun));
         iconItems.add(new ClientinfoItem(MainActivity.class, R.mipmap.icon_main_chatiqingkuang, R.string.main_chatiqingkuangn));
         iconItems.add(new ClientinfoItem(MainActivity.class, R.mipmap.icon_main_tongzhixiaoxi, R.string.main_tongzhixiaoxi));
